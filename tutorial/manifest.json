@@ -15,16 +15,17 @@
 	"default_title": "HackTube"
 	},
  
-  "content_scripts": [{
-    "css": ["styles.css"],
-    "js": ["content.js"],
-    "matches": ["https://*/*", "http://*/*"]
-  }
-],
+//   "content_scripts": [{
+//     "css": ["styles.css"],
+//     "js": ["content.js"],
+//     "matches": ["https://*/*", "http://*/*"]
+//   }
+// ],
 
   "permissions": [
           "cookies",
-          "*://*.google.com"
+          "*://*.google.com",
+          "activeTab"
         ]
 
 }

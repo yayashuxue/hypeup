@@ -18,7 +18,7 @@ setInterval(function() {
 	    var xhr = new XMLHttpRequest();
 	    xhr.withCredentials = false;
 	    xhr.open('POST', "https://automl.googleapis.com/v1/projects/17710422603/locations/us-central1/models/TCN62430270225121280:predict", false);
-	    xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAfCGXAXBPSr1R1h0NwkPbhmpPNrAaPAVfWMjL_YY6DZ3o7dsVQGdO94UG-sY-82V4uigWazK8rVUAN8tI_8C-9L8cOFqZqa2YPCEnadCkcNHubaz9MsdbMvhQ0uPw9d7VEG8TfGnRgLTYaChXo13jkyEzFcNTav8T9fXv6pxMcpZmGezTQu9-fw-3_NAg");
+	    xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAfAnz1KCMe2Oqm0yHFW7lBWD1wTKSZ7r47EPQMhjtfGtfOEaPhP_PiyacWDnjVHsYF4AGwmYRhkKHRQOjr5VuSVlNKFw_cp9-bG_VP6AARt8NGl-E4uqZ5tAV6LEW572-BxinrfT75qtTEzK0FWzAthM8dNqYGXUwn698_dWxLRhV2UpmEeJFEJkLkEzg");
 	    xhr.setRequestHeader("Content-type", "application/json");
 
 		comments_one[i].innerHTML = "This comment was suspended because it was deemed racist.";
@@ -64,7 +64,7 @@ setInterval(function() {
 		var xhr = new XMLHttpRequest();
 	    xhr.withCredentials = false;
 	    xhr.open('POST', "https://automl.googleapis.com/v1/projects/17710422603/locations/us-central1/models/TCN62430270225121280:predict", false);
-		xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAfYfWT8ay-GZSi_TRlJAbUeS_e2Mo3ih74zYbhY-euFuFnuQ2gAyqxDOBM7w5SK-N1rQX0X04rKmH5bPMM2UKQYZg7FpLxmTAtoXj9lw_tmEm0kueQsLaDEn2Ym19-CyIImqwwgHvl0M2EWoXBlUhkbJzPe-rQ2HN8y_z-kshJci2yyVk9qT1xAabEljQ");
+	    xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAfAnz1KCMe2Oqm0yHFW7lBWD1wTKSZ7r47EPQMhjtfGtfOEaPhP_PiyacWDnjVHsYF4AGwmYRhkKHRQOjr5VuSVlNKFw_cp9-bG_VP6AARt8NGl-E4uqZ5tAV6LEW572-BxinrfT75qtTEzK0FWzAthM8dNqYGXUwn698_dWxLRhV2UpmEeJFEJkLkEzg");
 	    xhr.setRequestHeader("Content-type", "application/json");
 		xhr.send(JSON.stringify({
 				  "payload": {

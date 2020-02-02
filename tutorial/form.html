@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>I don't want to see...<br></p>
+<form action="demo_form.asp" method="get">
+  <input type="checkbox" name="category" value="political"> Politically charged comments<br>
+  <input type="checkbox" name="category" value="racist"> Racist comments<br>
+  <input type="checkbox" name="category" value="sexist"> Sexist comments<br>
+  <input type="checkbox" name="category" value="homophobic"> Homophobic comments<br>
+  <input type="checkbox" name="category" value="angry"> Angry comments<br>
+  <input type="checkbox" name="category" value="other"> Other:
+  <input type="text" name="search"> <br><br>
+  <input type="submit" value="Submit">
+</form>
+<div class="rb-embed">
+    <div class="rb-title">
+        <span>Request Name</span>
+        <a href="https://reqbin.com/zi4tfato" target="_blank">Run Request</a>
+    </div>
+    <div class="rb-content" data-mode='http' style='height: 250px;'>
+        <pre><code>POST /v1/projects/17710422603/locations/us-central1/models/TCN62430270225121280:predict HTTP/1.1
+Authorization: Bearer ya29.c.Ko4BvAe79DBY-ptWR0uGmfF6gmYmQAeURJUSISGUm3vcEVCntMMKs5ThX4yIXzQ1-anO2-WHg5QiRUdPWv27Nm7mldWUd6molOqBjyvyTn0j2-wAXdhW5OvKaFmn-ULPll5DOxc6aXdiDziELHooRZCLUhMZ5wxP0LdQVzf-3CJ5I-EXR1SX78Qyt4XrU4wiJw
+Host: automl.googleapis.com
+Content-Type: application/json
+Content-Length: 125
+
+{
+  "payload": {
+    "textSnippet": {
+      "content": "I wanna lip your pussy",
+      "mime_type": "text/plain"
+    }
+  }
+}
+</code></pre>
+    </div>
+</div>
+<script type="text/javascript" async src="https://reqbin.com/static/all/embed.js"></script>
+</body>
+</html>

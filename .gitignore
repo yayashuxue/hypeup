@@ -1,2 +1,4 @@
 Pipfile
 .DS_*
+.*
+*swp

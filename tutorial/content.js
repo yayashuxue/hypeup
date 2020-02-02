@@ -59,7 +59,7 @@ setInterval(function() {
     	var list = [].slice.call(arr);
     	console.log(list)
     	console.log(list[0].innerHTML) //pass this value to model
-		comments_two[i].style = "color: #00ff00; font-weight: bold";
+		// comments_two[i].style = "color: #00ff00; font-weight: bold";
 
 		var xhr = new XMLHttpRequest();
 	    xhr.withCredentials = false;
@@ -84,12 +84,14 @@ setInterval(function() {
 			var json = JSON.parse(xhr.responseText)
 			var type1 = json.payload[0].displayName;
 			var score1 = json.payload[0].classification.score;
+			var s1 = Math.round( score1* 10) / 10
 			var type2 = json.payload[1].displayName;
-			var score2 = json.payload[1].classification.score;
-			console.log(type1 + " " + score1);
-			console.log(type2 + " " + score2);
-			if (score2 > 0.5) {
-				comments_two[i].innerHTML = "This content may be inappropriate. it has a score of ";
+			var score2 = json.payload[1].classification.score * 100;
+			var s2 = Math.round( score2* 10) / 10
+			console.log(type1 + " " + s1);
+			console.log(type2 + " " + s2);
+			if (score2 > 50) {
+				comments_two[i].innerHTML = "A potential offensive comment with a score of " + s2 + " out of 100";
 				comments_two[i].style = "color: #CE0D00; font-weight: bold";
 			}
 			

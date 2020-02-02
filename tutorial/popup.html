@@ -1,16 +1,112 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-      }
-    </style>
-  </head>
-  <body>
-    <button id="changeColor"></button>
-    <script src="popup.js"></script>
-  </body>
+<head>
+	<title>#HackHarassment</title>
+</head>
+
+<style>
+	
+	body {
+		background: url('grad.png');
+		background-size: 400px;
+		color: black;
+		height: 345px;
+		width: 320px;
+		text-align: center;
+		padding: 5px;
+		font-family: Avenir Next Condensed, Helvetica, serif;
+	}
+	@font-face {
+		font-family: Avenir Next Condensed;
+		src:url(Avenir Next Condensed.ttc);
+	}
+	img {
+		height:70px;
+		margin-top: 10px;
+	}
+
+	.top {
+		color: black;
+		padding: 6px 15px;
+		border-width: 2px;
+		margin: 6px 6px 0 6px;
+		background-color: rgba(255,255,255,.9);
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+	.options {
+		color: black;
+		padding: 6px 15px;
+		border-width: 2px;
+		margin: 0 6px 6px 6px;
+		background-color: rgba(255,255,255,.8);
+		height: 224px;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+	p {
+		font-size: 24px;
+	}
+	h3 {
+		font-size: 16px;
+	}
+	hr {
+		width: 298px;
+		text-shadow: none;
+	}
+	form {
+		text-align: left;
+		padding: 0 40px;
+	}
+	#submitB {
+		margin-left: 65px;
+		border: none;
+	    background-color: #9D040E;
+	    color: white;
+	    padding: 5px 15px 5px 15px;
+	    margin-top: 20px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    border-radius: 4px;
+	    -webkit-transition: all 0.5s ease-in-out;
+	}
+	#submitB:hover {
+		background-color: black;
+		color: white;
+	}
+	form {
+		font-size: 16px;
+	}
+	#otherInput {
+		margin-left: 20px;
+		width: 155px;
+		margin-top:3px;
+	}
+
+
+</style>
+
+<body>
+	<div class="box">
+		<div class="top">
+			<img src="logo.png">
+		</div>
+		<div class="options">
+			<h2>I don't want to see...</h2>
+			<form>
+  				<input type="checkbox" name="category" value="racist" id="racist" checked> Racist comments<br>
+  				<input type="checkbox" name="category" value="sexist" id="sexist" checked> Sexist comments<br>
+  				<input type="checkbox" name="category" value="homophobic" id="homophobic" checked> Homophobic comments<br>
+  				<input type="checkbox" name="category" value="profanity" id="profanity" checked> Profanity <br>
+  				<input id="submitB" type="submit" value="Submit">
+			</form>
+		</div>
+	</div>
+
+
+</body>
+<script type="text/javascript" src="popupscript.js"></script>
+
 </html>

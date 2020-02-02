@@ -1,33 +1,40 @@
-# HackTube
-### Winner of 2nd Place Overall and MLH's Hack Harassment challenge 
-A Chrome extension that fights online harassment found commonly within the YouTube comment section.  
-**Created at SBHacks 2017 at UC Santa Barbara**     
-**Devpost:** [Read more about our project here](https://devpost.com/software/hacktube)    
+HACKSC 2020 Project - Hype UP!
 
-## About
-HackTube monitors the YouTube comment section by finding racist, homophobic, and sexist words and automatically flagging comments containing those words by editing the source code of the webpage. With our extension enabled, Users are always left with a comment section free of hate and malicious words. It is a simple Chrome extension that makes YouTube a safer environment for users.
+Type Down, Hype Up. A chrome extension that prevents cyber ​​bully by censoring hate comments.
+
 
 ## Inspiration
-YouTube is a place for millions of people to share their voices and engage with their communities. Unfortunately, the YouTube comments section is notorious for enabling anonymous users to post hateful and derogatory messages with the click of a button. These messages are purely meant to cause anger and depression without ever providing any constructive criticism. For YouTubers, this means seeing the degrading and mentally-harmful comments on their content, and for the YouTube community, this means reading negative and offensive comments on their favorite videos. As young adults who consume this online content, we feel as though it is necessary to have a tool that combats these comments to make YouTube a safer place.
 
-## Installation
-1. Clone or download this repository into a folder
-2. Go to chrome://extensions/
-3. Check the box "Developer mode"
-4. Click "Load unpacked extension.." and select the folder
-5. Run the extension and go on any YouTube video
+2019 winter, a famous South Korean celebrity, Sullie, committed suicide under the **constant pressure from cyber violence**, alarming not only within the South Korean, but the rest of the world. 
 
-## Built With
-- Javascript
-- HTML/CSS
+2020, we lived in a digital world. There is no denying that social media took over a huge part of our life. As we share the snippets of our passions and emotions, **cyberbullying is not the problem only a celebrity faces.** We all encountered moments that one or two comments that brought us down. We think cyberbullying is just important as all other forms of aggression. **We want to change that and develop an extension to find peace and positivity in our digital safe space.**
 
-## Contributors
-- [Teresa Liu](http://www.teresaliu.com/)
-- [Nishir Shelat](http://nishirshelat.com/)
-- [Melissa Wen](https://github.com/melissajwen)
+## What it does
 
-## Images
+Once plugged in our chrome extension **"Hype Up"**, the user can click on the icon to view the interface. The user can click on the intuitive **"Start!"** button to start filtering out hate comments. They can click into the comment section of an Instagram post and will see that potentially hateful and harassing comments that are classified by our NLP model are blocked. When scrolling down, all the comments that are possibly offensive will be censored and replaced with the text saying "this comment might be offensive and have been blocked."
 
-![gallery 2](https://cloud.githubusercontent.com/assets/22362476/26425955/b3268c30-40a4-11e7-8522-b0d3b9385a4e.jpg)
-![gallery 1](https://cloud.githubusercontent.com/assets/22362476/26425933/9ea78d0e-40a4-11e7-991f-f00e65d6b3f4.jpg)
-![gallery](https://cloud.githubusercontent.com/assets/22362476/26425934/9eb16496-40a4-11e7-898a-8995dc98d279.jpg)
+## How we built it
+
+We collected labelled data from established research projects that publicly share their github online. The data consist of 12,000 sentences from movies and social media platforms like twitter. Each sentence is labelled either neutral speech (0) or hate speech (1). We converted the data into a csv file, and used them to train the autoML sentiment analysis model available on the Google Cloud Platform. We scraped each comment in the comment section and used the model to determine whether each comment is hateful/harrassing or not.
+The back-end utilized Ajax to post request to our google cloud trained model to get predicted possibility of neutrality/inappropriateness (with score 0 - 1) of each comment. We flagged comment that has a score of inappropriateness bigger than 0.6.
+We used html, css, and javascript to create the pop-up window when clicking the chrome extension icon. We used content script to web scrape comments on Instagram.
+
+## Challenges we ran into
+
+Nature Language Processing is a challenging topic to comprehend. We struggled with training the model, getting familiar with google api interface. 
+
+Integrating the model to google cloud and sending requests through javascript was also huge challenge that we bumped into.
+
+## Accomplishments that we're proud of
+
+None of us have had experience in implementing NLP projects before, but we somehow figured out the entire process. Building chrome extension is also new to us. All of us are glad that we quickly got our hands on these unfamiliar topics and managed to build a presentable project based on these topics.
+
+## What we learned
+
+This is our first experience with NLP, google chrome extension and many other things!
+
+We learned about data preprocessing, training NLP model, creating chrome extension, linking front-end back-end within javascript, and google cloud machine learning platform
+
+## What's next for HypeUP
+
+The extension is currently made specific for Instagram. We want to make it a universally useful tool that works across more social media platforms.

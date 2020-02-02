@@ -3,35 +3,37 @@
 <head>
 	<title>HypeUp</title>
 </head>
-<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
-<style>
-	
-	body {
-		margin:0;
-		padding:0;
-		color: black;
-		height: 310px;
-		width: 260px;
-		text-align: center;
-		padding: 5px;
-		font-family: Avenir Next Condensed, Helvetica, serif;
-	}
-	@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
 
-	button {
-		position: relative;
-	display: inline-block;
-	cursor: pointer;
-	outline: none;
-	border: 0;
-	vertical-align: middle;
-	text-decoration: none;
-	font-size: 16px;
-	font-family: inherit;
-	}
+<style>
+@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  background: #fff;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
 button.learn-more {
-  font-family: "Rubik", sans-serif;
+    font-family: "Rubik", sans-serif;
   font-weight: 600;
   color: #382b22;
   text-transform: uppercase;
@@ -87,66 +89,11 @@ button.learn-more:active::before {
 }
 
 
-	img {
-		width:100%;
-	}
-
-	.top {
-		width:100%;
-	}
-	.options {
-		color: black;
-		padding: 6px 15px;
-		border-width: 2px;
-		margin: 0 6px 6px 6px;
-		background-color: rgba(255,255,255,.8);
-		height: 224px;
-		border-bottom-right-radius: 5px;
-		border-bottom-left-radius: 5px;
-	}
-	p {
-		font-size: 24px;
-	}
-	h3 {
-		font-size: 16px;
-		margin-top: 20px;
-		font-family: 'Quicksand', sans-serif;
-	}
-	h4{
-		margin-top: 40px;
-		font-size: 10px;
-		font-family: 'Raleway', sans-serif;
-	}
-	hr {
-		width: 298px;
-		text-shadow: none;
-	}
-	#otherInput {
-		margin-left: 20px;
-		width: 155px;
-		margin-top:3px;
-	}
-
-	#button{
-		width:100%;
-	}
 </style>
 
 <body>
-	<div class="box">
-		<div class="top">
-			<img src="logo.png">
-		</div>
-		<h3>Press the button to filter hate comments.</h3>
-		<div id = "button">
-		<button class="learn-more">START!</button>
-		</div>
-		<h4>TYPE DOWN, HYPE UP</h4>
-	</div>
-	</div>
-
-
+    <button class="learn-more">Learn More</button>
 </body>
-<script type="text/javascript" src="popupscript.js"></script>
+
 
 </html>

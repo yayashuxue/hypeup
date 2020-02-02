@@ -1,4 +1,4 @@
-# skillsup
+# HypeUP
 
 # set up
 pip install --upgrade google-cloud-storage

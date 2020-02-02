@@ -95,7 +95,8 @@ setInterval(function() {
     	sleep(1000);
 
     	console.log("Comment NO. " + i);
-		comments_two[i].innerHTML = "This comment was suspended because it was deemed racist.";
+    	console.log(comments_two[i].innerHTML);
+		//comments_two[i].innerHTML = "This comment was suspended because it was deemed racist.";
 		comments_two[i].style = "color: #CE0D00; font-weight: bold";
 
 		var xhr = new XMLHttpRequest();
@@ -111,7 +112,7 @@ setInterval(function() {
 		xhr.send(JSON.stringify({
 				  "payload": {
 				    "textSnippet": {
-				      "content": "I wanna lip your pussy",
+				      "content": comments_two[i].innerHTML,
 				      "mime_type": "text/plain"
 				    }
 				  }

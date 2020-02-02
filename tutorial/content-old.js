@@ -33,15 +33,14 @@ function getCookie(cname) {
 // sBool = 1;
 // vBool = 1;
 function sleep(milliseconds) {
-	let timeStart = new Date().getTime();
-	while (true) {
-		let elapsedTime = new Date().getTime() - timeStart;
-		if (elapsedTime > milliseconds) {
-		  break;
-		}
-	}
+let timeStart = new Date().getTime();
+while (true) {
+let elapsedTime = new Date().getTime() - timeStart;
+if (elapsedTime > milliseconds) {
+  break;
 }
-
+}
+}
 setInterval(function() {
 /*	var xhr = new XMLHttpRequest();
 	xhr.withCredentials = false;
@@ -52,12 +51,12 @@ setInterval(function() {
 	comments_one = document.getElementsByClassName("expander-exp");
 	// var numCensored = 0;
 	for(var i = 0; i < comments_one.length; i++) {
-    //console.log(i)
+    console.log(i)
 
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = false;
     xhr.open('POST', "https://automl.googleapis.com/v1/projects/17710422603/locations/us-central1/models/TCN62430270225121280:predict", true);
-    xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAfjXEM8HeZVoYl1r4X0XMl6Vu4bcYZw0yCVrt7aX_Mh3v12oESHPDCtbo3c1GgRe0Y4HLz07_j6ezaQeXgwbxlYH1BQk3ehCioM2oA0bAjAVU36LPEIwGAzelJVrV-Mez88oDm6YB2t59mTs9BsrHjmGSkaBB0oMMfy3R489qcqySgeSdxWO9BiVNH5Qw");
+    xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAcPXSswQD6qt-R5MlZaSxRzgJIdEHj3_ezk-kPhoHEpYIsAI6ZRiypkLV87F58zJUDpYUh5-iENy6TW3Xo5FkVQgA27yVVi9dnxcjyJmqr4rSjxWqLQl-IB73lqZA_VAKE2H0q966unkGmiMbebWUPsmQtt1G0MfwGPe_JJUyF8c2XoxavLdpbY2khGCA");
     xhr.setRequestHeader("Content-type", "application/json");
 
 		// var censoredYet = 0;
@@ -74,77 +73,45 @@ setInterval(function() {
 				    }
 				  }
 				}
-			));
+				));
 			xhr.onreadystatechange = function() {
         if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
           console.log(xhr.responseText);
-          console.log(i);
         }else{
           sleep(1000);
           console.log("sleeping...");
         }
 			}
 	}
-
-
-	// COMMENT TWO WORKS:))))
 	comments_two = document.getElementsByClassName("Mr508");
-	console.log("Number of comments: " + comments_two.length);
 	// var numCensored = 0;
 	for(var i = 0; i < comments_two.length; i++) {
-    	sleep(1000);
-
-    	console.log("Comment NO. " + i);
-		comments_two[i].innerHTML = "This comment was suspended because it was deemed racist.";
-		comments_two[i].style = "color: #CE0D00; font-weight: bold";
-
-		var xhr = new XMLHttpRequest();
-	    xhr.withCredentials = false;
-	    //xhr.open('POST', "https://automl.googleapis.com/v1/projects/17710422603/locations/us-central1/models/TCN62430270225121280:predict", true);
-	    xhr.open('POST', "https://automl.googleapis.com/v1/projects/17710422603/locations/us-central1/models/TCN62430270225121280:predict", false);
-		xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAfjXEM8HeZVoYl1r4X0XMl6Vu4bcYZw0yCVrt7aX_Mh3v12oESHPDCtbo3c1GgRe0Y4HLz07_j6ezaQeXgwbxlYH1BQk3ehCioM2oA0bAjAVU36LPEIwGAzelJVrV-Mez88oDm6YB2t59mTs9BsrHjmGSkaBB0oMMfy3R489qcqySgeSdxWO9BiVNH5Qw");
-	    xhr.setRequestHeader("Content-type", "application/json");
-
+    sleep(1000);
 		// var censoredYet = 0;
 		// if(rBool == 1) {
 		// 	censoredYet = 1;
-		xhr.send(JSON.stringify({
+			comments_two[i].innerHTML = "This comment was suspended because it was deemed racist.";
+			comments_two[i].style = "color: #CE0D00; font-weight: bold";
+
+			xhr.send(JSON.stringify({
 				  "payload": {
 				    "textSnippet": {
-				      "content": "I wanna lip your pussy",
+				      "content": comments_two[i],
 				      "mime_type": "text/plain"
 				    }
 				  }
 				}
-		));
+				));
+			xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200){
 
-		if (xhr.status === 200 && xhr.responseText.length > 0)
-		{
-			console.log("in callback function");
-			console.log(xhr.responseText)
-			console.log(i);
-		}
-		else
-		{
-			console.log("error: in callback function");
-			console.log(xhr.responseText);
-			console.log(xhr.status)
-			console.log(i);
-		}
-
-		// xhr.onreadystatechange = function() {
-		// 	console.log("in callback function");
-	 //        if (xhr.readyState === 4 && xhr.status === 200) {
-		// 		console.log(xhr.status);
-		// 	    //console.log(i);
-			    
-		// 	    //var data = JSON.parse(xhr.responseText);
-		// 	    //console.log(data);
-	 //        }
-	 //        else {
-	 //        	console.log("error!!!")
-	 //        }
-		// }
+				  console.log(xhr.status);
+			    console.log("HELLO");
+			    console.log(xhr.responseText);
+			    var data = JSON.parse(xhr.responseText);
+			    console.log(data);
+        }
+			}
 		// }
 		// if(pBool == 1) {
 		// 	for(var j = 0; j < profanity.length; j++) {

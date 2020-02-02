@@ -32,18 +32,26 @@ function getCookie(cname) {
 // hBool = 1;
 // sBool = 1;
 // vBool = 1;
-
+function sleep(milliseconds) {
+let timeStart = new Date().getTime();
+while (true) {
+let elapsedTime = new Date().getTime() - timeStart;
+if (elapsedTime > milliseconds) {
+  break;
+ }
+ }
+}
 setInterval(function() {
 	var xhr = new XMLHttpRequest();
 	xhr.withCredentials = false;
 	xhr.open('POST', "https://automl.googleapis.com/v1/projects/17710422603/locations/us-central1/models/TCN62430270225121280:predict", true);
-
-	xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAdZ8p9GRFql9hCWKp-IqFc5CwVoV1zjiGItx9xDTFyst-IT-0SvZ6ApbR83dWQpr91WBky5H6lf44EQ7GewMZLE3epaAn13M_R6lOqTF784X0W1ML5_jvlNJhc7qRs9nUhhXzpBYIcX2QriEObHgWz7MKZCPjpcBDEKa55IR7pmUiLijNp4QY9JoZE5TA");
+  xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAcPXSswQD6qt-R5MlZaSxRzgJIdEHj3_ezk-kPhoHEpYIsAI6ZRiypkLV87F58zJUDpYUh5-iENy6TW3Xo5FkVQgA27yVVi9dnxcjyJmqr4rSjxWqLQl-IB73lqZA_VAKE2H0q966unkGmiMbebWUPsmQtt1G0MfwGPe_JJUyF8c2XoxavLdpbY2khGCA");
 	xhr.setRequestHeader("Content-type", "application/json");
-	
+
 	comments_one = document.getElementsByClassName("expander-exp");
 	// var numCensored = 0;
 	for(var i = 0; i < comments_one.length; i++) {
+    sleep(1000);
 		// var censoredYet = 0;
 		// if(rBool == 1) {
 			// censoredYet = 1;
@@ -53,7 +61,7 @@ setInterval(function() {
 			xhr.send(JSON.stringify({
 				  "payload": {
 				    "textSnippet": {
-				      "content": comments_one[i],
+				      "content": "I wanna lip your pussy",
 				      "mime_type": "text/plain"
 				    }
 				  }
@@ -61,7 +69,7 @@ setInterval(function() {
 				));
 			xhr.onreadystatechange = function() {
 				console.log(xhr.status)
-			    console.log("HELLO")
+			    console.log(i)
 			    console.log(xhr.responseText);
 			    var data = JSON.parse(xhr.responseText);
 			    console.log(data);

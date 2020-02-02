@@ -5,11 +5,14 @@
 //
 // created: Wed Feb 15 16:28:55 2017
 // last saved: <2017-February-15 18:43:10>
+document.write('10');
+document.write('10');
+document.write('10');
 var xhr = new XMLHttpRequest();
 xhr.withCredentials = false;
 xhr.open('POST', "https://automl.googleapis.com/v1/projects/17710422603/locations/us-central1/models/TCN62430270225121280:predict", true);
 
-xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAdZ8p9GRFql9hCWKp-IqFc5CwVoV1zjiGItx9xDTFyst-IT-0SvZ6ApbR83dWQpr91WBky5H6lf44EQ7GewMZLE3epaAn13M_R6lOqTF784X0W1ML5_jvlNJhc7qRs9nUhhXzpBYIcX2QriEObHgWz7MKZCPjpcBDEKa55IR7pmUiLijNp4QY9JoZE5TA");
+xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAcPXSswQD6qt-R5MlZaSxRzgJIdEHj3_ezk-kPhoHEpYIsAI6ZRiypkLV87F58zJUDpYUh5-iENy6TW3Xo5FkVQgA27yVVi9dnxcjyJmqr4rSjxWqLQl-IB73lqZA_VAKE2H0q966unkGmiMbebWUPsmQtt1G0MfwGPe_JJUyF8c2XoxavLdpbY2khGCA");
 xhr.setRequestHeader("Content-type", "application/json");
 xhr.send(JSON.stringify({
   "payload": {
@@ -20,12 +23,20 @@ xhr.send(JSON.stringify({
   }
 }
 ));
-xhr.onreadystatechange = function() {
+/*
+xhr.onload = function() {
+   console.log("HELLO")
+   console.log(this.responseText);
+   var data = JSON.parse(this.responseText);
+   console.log(data);
+ }
+ */
+ xhr.onreadystatechange = function() {
     console.log("HELLO")
     console.log(xhr.responseText);
     var data = JSON.parse(xhr.responseText);
     console.log(data);
-  }
+}
 
 //xhr.onreadystatechange = processRequest;
 
@@ -59,4 +70,8 @@ axios({
   headers: { 'authorization': `Bearer ya29.c.Ko4BvAdZ8p9GRFql9hCWKp-IqFc5CwVoV1zjiGItx9xDTFyst-IT-0SvZ6ApbR83dWQpr91WBky5H6lf44EQ7GewMZLE3epaAn13M_R6lOqTF784X0W1ML5_jvlNJhc7qRs9nUhhXzpBYIcX2QriEObHgWz7MKZCPjpcBDEKa55IR7pmUiLijNp4QY9JoZE5TA` }
 });
 */
-document.write('succeed');
+document.write('10');
+document.write('10');
+document.write('10');
+document.write('10');
+document.write('10');

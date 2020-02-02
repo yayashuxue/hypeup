@@ -95,7 +95,12 @@ setInterval(function() {
     	sleep(1000);
 
     	console.log("Comment NO. " + i);
-    	console.log(comments_two[i].innerHTML);
+    	var arr = comments_two[i].getElementsByTagName("span");
+    	console.log(typeof(arr))
+    	console.log(arr);
+    	var list = [].slice.call(arr);
+    	console.log(list)
+    	console.log(list[0].innerHTML) //pass this to model!!!!!!!!!
 		//comments_two[i].innerHTML = "This comment was suspended because it was deemed racist.";
 		comments_two[i].style = "color: #CE0D00; font-weight: bold";
 

@@ -18,7 +18,7 @@ setInterval(function() {
 	    var xhr = new XMLHttpRequest();
 	    xhr.withCredentials = false;
 	    xhr.open('POST', "https://automl.googleapis.com/v1/projects/17710422603/locations/us-central1/models/TCN62430270225121280:predict", false);
-	    xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAe3tQ4aHIm4j5UO1fKWhzckncukA6qrJ1CzrWAbCG-2cZEpcHJafziwAMveAlyG3ynEFDfM3VYBq_OD_y8VoPA0L71aufo2I5PdHvCaxGuskjekSnFI1qp95VLmrSh8zzj6mt-sqLgmPkDnC__pnn4IKKwnVOMUyIFeoOUTgP8HEUEv89TE9Ccd2oogvQ");
+	    xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAfCGXAXBPSr1R1h0NwkPbhmpPNrAaPAVfWMjL_YY6DZ3o7dsVQGdO94UG-sY-82V4uigWazK8rVUAN8tI_8C-9L8cOFqZqa2YPCEnadCkcNHubaz9MsdbMvhQ0uPw9d7VEG8TfGnRgLTYaChXo13jkyEzFcNTav8T9fXv6pxMcpZmGezTQu9-fw-3_NAg");
 	    xhr.setRequestHeader("Content-type", "application/json");
 
 		comments_one[i].innerHTML = "This comment was suspended because it was deemed racist.";
@@ -59,12 +59,12 @@ setInterval(function() {
     	var list = [].slice.call(arr);
     	console.log(list)
     	console.log(list[0].innerHTML) //pass this value to model
-		comments_two[i].style = "color: #CE0D00; font-weight: bold";
+		comments_two[i].style = "color: #00ff00; font-weight: bold";
 
 		var xhr = new XMLHttpRequest();
 	    xhr.withCredentials = false;
 	    xhr.open('POST', "https://automl.googleapis.com/v1/projects/17710422603/locations/us-central1/models/TCN62430270225121280:predict", false);
-		xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAe3tQ4aHIm4j5UO1fKWhzckncukA6qrJ1CzrWAbCG-2cZEpcHJafziwAMveAlyG3ynEFDfM3VYBq_OD_y8VoPA0L71aufo2I5PdHvCaxGuskjekSnFI1qp95VLmrSh8zzj6mt-sqLgmPkDnC__pnn4IKKwnVOMUyIFeoOUTgP8HEUEv89TE9Ccd2oogvQ");
+		xhr.setRequestHeader('Authorization', "Bearer ya29.c.Ko4BvAfCGXAXBPSr1R1h0NwkPbhmpPNrAaPAVfWMjL_YY6DZ3o7dsVQGdO94UG-sY-82V4uigWazK8rVUAN8tI_8C-9L8cOFqZqa2YPCEnadCkcNHubaz9MsdbMvhQ0uPw9d7VEG8TfGnRgLTYaChXo13jkyEzFcNTav8T9fXv6pxMcpZmGezTQu9-fw-3_NAg");
 	    xhr.setRequestHeader("Content-type", "application/json");
 		xhr.send(JSON.stringify({
 				  "payload": {
@@ -88,6 +88,10 @@ setInterval(function() {
 			var score2 = json.payload[1].classification.score;
 			console.log(type1 + " " + score1);
 			console.log(type2 + " " + score2);
+			if (score2 > 0.5) {
+				comments_two[i].innerHTML = "This content may be inappropriate. it has a score of ";
+				comments_two[i].style = "color: #CE0D00; font-weight: bold";
+			}
 			
 		}
 		else

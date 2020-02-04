@@ -1,12 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "crypto-gradient-266918",
-  "private_key_id": "ae58bd3f5c43a515c09821b9ef449c1ff2ddaaca",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCcwJ4k9hRlsCow\nlRgL9zkLQfv4cDJEzRPXoGRlD+xP1dY6q81cn8QnERKygJO2JyneRqQkBaVlc9m1\n5mPU34Hsdeyo68dJx3HrPmTCxGUCOTWRP1tcD9zkqclKzxPym+eaVSvAcUP4qkll\njxwslKn1XLeovw9qPdklpe/mvUvbelG64644QD/2FvV+xUBgPAkJahHXQJtusZaI\naYAv+bmDJYb2YTeWRqZAQfde8n08Qax+4u61FrgIFBMmlJ/Hqe6g9RB4gPKOscOS\nXtpCZ8Qji4dDZ5CTs/1osfhVEwI5pH+4tAGXCMJc/SsEXaEo5tRFuZgrcnZnMNHk\n6hkW44OjAgMBAAECggEAM9gDFg9rfJxwv8O4AdEhBUesGiWlgprfSqxKOCC1lEwR\nwDLtR4qx2gfsCqy67f5y+wibJizV4MGZym8qKpBHzNjNzqq4rX6w/1CSC9bf34Xj\nYSg2w7KdaOV85Wiq3M1SovkzcMElbXuIrfXQqC/9LGEff0i9xPIyvSBuQX7vNWXw\n4hgA7kIXbSG+RdiYQzkx379m6gIccy2eaDqNuNtvpHrNRmVQgYlgTFvj9v8gVsXd\nQKXs8Rgu5BsFrmCqRRtqP1fgRVTdoJITz9j6EeHe63LK9wJL/CRomtWNCHm9cUJJ\nDE8v0Ofm5fk0FmyLnXboOpJAMOvwIZJ6Tch6CHIuwQKBgQDZ8fU7vhniGkkE3HFw\n1S34xxT7TwJ5JOnxgsjPfQX46YQplkOm2+TiLulXhsOrnrcnJVOtSL01wLdNcSL/\n1DQxJFnqKzhcOKktIuHiim6JaghYgbBqGCMCSbxcTA8OsCuCJW5xkpEZegrzQtHa\nhj53p16yoyCaTQ6JTZmQWm5DQQKBgQC4H1/UDxMyJqViNBbOzqKxRfX7Qz05mtE4\n08CLPixcQ7D+NyG6z5VQqHLJcU/Ow6tLgGQBEre+4BkC/TTpLF90kjZHtKRiqOBZ\ntNkk61srvr3z+9aK+sLy07loHZqboAKpp3cMILKw9eOdAa0CqZiarW52sDJWNJ4q\nhK4bBFKh4wKBgFlVay7M0jEykwGSFlGooApcGAaWsS3U6qua7xLVbVBE725YcGyB\nr8Tic7TzwVqkWPCLxUu/CAdzce8lU7JHWglWnCB3DMgIVZfxt2MzWPGsa7VTm2sx\nb5Athy7R4k4j+gGDtEyLRjyKINjrZ7dJ1WsYSKGyade1hCLVkv9vgcjBAoGAJkgP\nqo1/1juGw0ZFP7ZiySzcmeM/BY0U1xXfwJOqsXw5foGD981VJDIBu7RdfYXdRZNq\nN3bm0T7StHZk294n8pq7wmjijMjD7KLXSv/MMuozoFjKIJdGlSpEMEuHa7f3FcMF\n03Ww8W4OZwSELjuIyRAqGW9E5/uErx5q/J8HdzUCgYBOgDkmG/xnSh7NxeT1bWoR\nacTZ1L2wqu/hEzgUt7K47vCBl5h89DHYJPuHeetSt7NqxIBML6UZstlpC0I/6FCb\ndux/2WVK2ayHkjmylFXaYu3f350Ls8wW/oPc4x/02KfsB1Jf6pXfa0chtJUuEtpM\n4FNGX2+5deqeTAm8ApGTVQ==\n-----END PRIVATE KEY-----\n",
-  "client_email": "jyshi1107@crypto-gradient-266918.iam.gserviceaccount.com",
-  "client_id": "100022328694434547140",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/jyshi1107%40crypto-gradient-266918.iam.gserviceaccount.com"
-}
+This part is removed and can be regenerated through google cloud

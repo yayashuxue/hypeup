@@ -2,6 +2,7 @@ HACKSC 2020 Project - Hype UP!
 
 Type Down, Hype Up. A chrome extension that prevents cyber ​​bully by censoring hate comments.
 
+Video Demo: https://www.youtube.com/watch?v=RMk7w2A3C3I
 
 ## Inspiration
 
